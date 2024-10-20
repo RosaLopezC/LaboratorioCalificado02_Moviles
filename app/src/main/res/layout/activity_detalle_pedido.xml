@@ -8,7 +8,6 @@
     android:background="#FFFFFF"
     tools:context=".DetallePedidoActivity">
 
-    <!-- Título -->
     <TextView
         android:id="@+id/tvPedido"
         android:layout_width="wrap_content"
@@ -21,7 +20,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp" />
 
-    <!-- Icono y Nombre Cliente -->
     <ImageView
         android:id="@+id/icNombreCliente"
         android:layout_width="48dp"
@@ -45,7 +43,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="16dp" />
 
-    <!-- Icono y Número Cliente -->
     <ImageView
         android:id="@+id/icNumeroCliente"
         android:layout_width="48dp"
@@ -69,7 +66,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="16dp" />
 
-    <!-- Icono y Productos -->
     <ImageView
         android:id="@+id/icProducto"
         android:layout_width="48dp"
@@ -93,7 +89,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="16dp" />
 
-    <!-- Icono y Ubicación -->
     <ImageView
         android:id="@+id/icUbicacion"
         android:layout_width="48dp"
@@ -117,7 +112,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="16dp" />
 
-    <!-- Botones de acciones (Llamar, WhatsApp, Maps) -->
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"

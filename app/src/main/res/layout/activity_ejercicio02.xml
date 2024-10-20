@@ -46,7 +46,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_margin="16dp" />
 
-    <!-- Nuevo campo de ciudad -->
     <EditText
         android:id="@+id/etCiudad"
         android:layout_width="0dp"
