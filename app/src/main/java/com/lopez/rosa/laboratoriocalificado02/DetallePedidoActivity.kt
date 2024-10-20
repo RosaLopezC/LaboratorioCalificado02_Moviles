@@ -1,5 +1,5 @@
 package com.lopez.rosa.laboratoriocalificado02
-
+import android.widget.Toast
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -38,12 +38,19 @@ class DetallePedidoActivity : AppCompatActivity() {
 
         val btnWsp = findViewById<ImageView>(R.id.btnWsp)
         btnWsp.setOnClickListener {
-            val uri = Uri.parse("smsto:$numeroCliente")
-            val intent = Intent(Intent.ACTION_SENDTO, uri)
+            val intent = Intent(Intent.ACTION_VIEW)
+            val uri = "https://wa.me/$numeroCliente?text=" +
+                    Uri.encode("Hola $nombreCliente, tus productos: $productos están en camino a $direccion, $ciudad.")
+            intent.data = Uri.parse(uri)
             intent.setPackage("com.whatsapp")
-            intent.putExtra("sms_body", "Hola $nombreCliente, tus productos: $productos están en camino a $direccion, $ciudad.")
-            startActivity(intent)
+
+            if (intent.resolveActivity(packageManager) != null) {
+                startActivity(intent)
+            } else {
+                Toast.makeText(this, "WhatsApp no está instalado", Toast.LENGTH_SHORT).show()
+            }
         }
+
 
         val btnMaps = findViewById<ImageView>(R.id.btnMaps)
         btnMaps.setOnClickListener {
